@@ -51,10 +51,7 @@ public class DialActivity extends AppCompatActivity {
         Uri uri = Uri.parse("tel:" + number);
         Intent intent = new Intent(Intent.ACTION_DIAL, uri);
 
-        if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
-        } else {
-            Toast.makeText(this, "No hay app para realizar llamadas en este dispositivo.", Toast.LENGTH_LONG).show();
-        }
+
     }
 }
