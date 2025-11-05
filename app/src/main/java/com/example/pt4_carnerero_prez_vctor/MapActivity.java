@@ -42,10 +42,7 @@ public class MapActivity extends AppCompatActivity {
         Uri geoUri = Uri.parse("geo:0,0?q=" + Uri.encode(query));
         Intent intent = new Intent(Intent.ACTION_VIEW, geoUri);
 
-        if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
-        } else {
-            Toast.makeText(this, "No hay ninguna app de mapas disponible.", Toast.LENGTH_LONG).show();
-        }
+
     }
 }
